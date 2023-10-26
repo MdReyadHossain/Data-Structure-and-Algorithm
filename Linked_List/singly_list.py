@@ -87,5 +87,16 @@ class SinglyList:
         else:
             print('Empty List!')
 
+    def reverse(self):
+        if self.head:
+            current: Node = self.head; previousPtr:Node = None; nextPtr:Node = current.next
+            while current.next:
+                current.next = previousPtr
+                previousPtr = current
+                current = nextPtr
+                nextPtr = current.next
+            current.next = previousPtr
+            self.head = current                
+
     def outOfBound(self, index: int):
         print(f'Error: Index {index} is out of bound!')

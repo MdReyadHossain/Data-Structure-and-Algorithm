@@ -1,15 +1,27 @@
 from singly_list import SinglyList
+from doubly_list import DoublyList
 
-list = SinglyList()
-list.insertAtFirst(400)
-list.insertAtFirst(200)
-list.insertAtLast(500)
-list.insertAt(100, 1)
-list.insertAt(300, 3)
-list.insertAt(600, 6)
+singlyList = SinglyList()
+singlyList.insertAtFirst(400)
+singlyList.insertAtFirst(200)
+singlyList.insertAtLast(500)
+singlyList.insertAt(100, 1)
+singlyList.insertAt(300, 3)
+singlyList.insertAt(600, 6)
 
-list.removeAtFirst()
-list.removeAtLast()
-list.removeAt(3)
+singlyList.removeAtFirst()
+singlyList.removeAtLast()
+singlyList.removeAt(3)
 
-list.printList()
+singlyList.printList()
+print('\nReverse List:')
+singlyList.reverse()
+singlyList.printList()
+
+print('\n\n')
+
+doublyList = DoublyList()
+doublyList.insertAtFirst(400)
+doublyList.insertAtFirst(200)
+doublyList.insertAtFirst(100)
+doublyList.printList()
