@@ -14,7 +14,16 @@ class DoublyList:
         self.size += 1
     
     def insertAtLast(self, data):
-        print()
+        node = Node(data)
+        if self.head:
+            current: Node = self.head
+            while current.next:
+                current = current.next
+            current.next = node
+            node.previous = current
+        else:
+            self.head = node
+        self.size += 1
     
     def printList(self):
         if self.head:
