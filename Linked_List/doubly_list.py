@@ -1,9 +1,9 @@
 from node import Node
+from list import List
 
-class DoublyList:
+class DoublyList(List):
     def __init__(self):
-        self.head: Node = None
-        self.size: int = 0
+        super().__init__(None, 0)
     
     def insertAtFirst(self, data):
         node = Node(data)
@@ -11,7 +11,9 @@ class DoublyList:
             self.head.previous = node
             node.next = self.head
         self.head = node
-        self.size += 1
+        self.size += 1 
+
+    # def insertAt(self, data, index):
     
     def insertAtLast(self, data):
         node = Node(data)
@@ -25,6 +27,8 @@ class DoublyList:
             self.head = node
         self.size += 1
     
+    # def getNode(self, index):
+
     def printList(self):
         if self.head:
             current: Node = self.head

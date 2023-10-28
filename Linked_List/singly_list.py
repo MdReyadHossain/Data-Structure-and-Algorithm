@@ -1,9 +1,9 @@
 from node import Node
+from list import List
 
-class SinglyList:
+class SinglyList(List):
     def __init__(self):
-        self.head: Node = None
-        self.size: int = 0
+        super().__init__(None, 0)
 
     def insertAtFirst(self, data):
         self.head = Node(data, self.head)
@@ -96,7 +96,4 @@ class SinglyList:
                 current = nextPtr
                 nextPtr = current.next
             current.next = previousPtr
-            self.head = current                
-
-    def outOfBound(self, index: int):
-        print(f'Error: Index {index} is out of bound!')
+            self.head = current
