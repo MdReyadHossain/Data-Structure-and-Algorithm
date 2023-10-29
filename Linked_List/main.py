@@ -31,7 +31,16 @@ def testDoublyList():
     doublyList.insertAtFirst(200)
     doublyList.insertAtFirst(100)
     doublyList.insertAtLast(500)
-    doublyList.getNode(4)
+    doublyList.insertAtLast(600)
+    doublyList.insertAt(300, 3)
+
+    doublyList.removeAtFirst()
+    doublyList.removeAt(1)
+    doublyList.removeAtLast()
+
+    doublyList.printList()
+    print('\nReverse List:')
+    doublyList.reverse()
     doublyList.printList()
     
 
