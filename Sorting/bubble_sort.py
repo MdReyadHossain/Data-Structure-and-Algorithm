@@ -10,14 +10,14 @@ class BubbleSort(List):
 
         for i in range(size):
             isSwap = False
-            print(f'\nPhase-{i+1}: {arr}')
+            # print(f'\nPhase-{i+1}: {arr}')
             for j in range(0, size - i - 1):
                 if arr[j] > arr[j+1]:
                     arr[j] = arr[j] + arr[j+1]
                     arr[j+1] = arr[j] - arr[j+1]
                     arr[j] = arr[j] - arr[j+1]
                     isSwap = True
-                print(f'\t{j+1}. {arr}')
+                # print(f'\t{j+1}. {arr}')
             if isSwap == False:
                 break
 
@@ -27,13 +27,13 @@ class BubbleSort(List):
 
         for i in range(size):
             isSwap = False
-            print(f'\nPhase-{i+1}: {arr}')
+            # print(f'\nPhase-{i+1}: {arr}')
             for j in range(0, size - i - 1):
                 if arr[j] < arr[j+1]:
                     arr[j] = arr[j] + arr[j+1]
                     arr[j+1] = arr[j] - arr[j+1]
                     arr[j] = arr[j] - arr[j+1]
                     isSwap = True
-                print(f'\t{j+1}. {arr}')
+                # print(f'\t{j+1}. {arr}')
             if isSwap == False:
                 break

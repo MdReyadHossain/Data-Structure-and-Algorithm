@@ -32,6 +32,10 @@ class DoublyList(List):
         else:
             self.outOfBound(index)
     
+    # def insertAt(self, data, index):
+    #     if :
+            
+
     def insertAtLast(self, data):
         node = Node(data)
         if self.head:

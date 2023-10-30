@@ -42,8 +42,7 @@ class SinglyList(List):
 
     def removeAtFirst(self):
         if self.head:
-            self.head = self.head.next
-            
+            self.head = self.head.next 
             self.size -= 1
 
     def removeAt(self, index: int):
