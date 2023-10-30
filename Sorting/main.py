@@ -3,7 +3,7 @@ from insertion_sort import InsertionSort
 from selection_sort import SelectionSort
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     arr: list = [7, 4, 2, 3, 8, 1, 5, 6]
     # arr: list = [7]
     # arr: list = [1, 2, 3, 4, 5, 6, 7, 8]
