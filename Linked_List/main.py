@@ -1,7 +1,7 @@
 from singly_list import SinglyList
 from doubly_list import DoublyList
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     def testSinglyList():
         print('\n')
         print('Singly List:')
