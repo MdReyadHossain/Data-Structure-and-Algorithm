@@ -13,6 +13,10 @@ class DoublyList:
         self.head = node
         self.size += 1
     
+    # def insertAt(self, data, index):
+    #     if :
+            
+
     def insertAtLast(self, data):
         node = Node(data)
         if self.head:
