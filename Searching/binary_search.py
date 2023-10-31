@@ -1,6 +1,5 @@
 from list import List
 
-
 class BinarySearch(List):
     def __init__(self, list):
         super().__init__(list, len(list))
@@ -9,16 +8,23 @@ class BinarySearch(List):
         self.max: int = self.size - 1
 
     def searchItem(self, item):
-        # sort = BubbleSort(self.list)
-        # sort.ascendingSort()
+        self.list.sort()
         print(self.list)
-        # while True:
-        #     size: int = self.max - self.min
-        #     if self.list[int(size/2)] > item:
-        #         self.max = int(size/2) - 1
-        #     elif self.list[int(size/2)] < item:
-        #         self.min = int(size/2) + 1
-        #     else:
-        #         self.index = int(size/2)
-        #         self.printResult(item, self.index)
-        #         break
+        size: int = self.max - self.min
+        while True:
+            if self.list[mid] > item:
+                self.max = mid - 1
+                mid: int = int(size/2)
+                size: int = self.max - self.min
+            elif self.list[mid] < item:
+                self.min = mid + 1
+                mid: int = int(size/2) + self.min
+            else:
+                self.index = mid
+                self.printResult(item, self.index)
+                break
+            print(f'middle = {mid}')
+            print(f'{self.min} -- {self.max}')
+        print(f'middle = {mid}')
+        print(f'{self.min} -- {self.max}')
+        return self.status

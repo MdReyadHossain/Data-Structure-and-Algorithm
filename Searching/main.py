@@ -2,7 +2,7 @@ from linear_search import LinearSearch
 from binary_search import BinarySearch
 
 if __name__ == '__main__':
-    arr: list = [7, 4, 2, 3, 8, 1, 5, 6]
+    arr: list = [700, 400, 200, 300, 800, 100, 500, 600]
 
     def testLinearSearch(list, item):
         linearSearch = LinearSearch(list)
@@ -14,5 +14,8 @@ if __name__ == '__main__':
         test = binarySearch.searchItem(item)
         print(test)
 
-    # testLinearSearch(arr, 6)
-    testBinarySearch(arr, 1)
+    # testLinearSearch(arr, 300)
+    testBinarySearch(arr, 100)
+
+# 100 200 300 400 500 600 700 800
+#  0   1   2   3   4   5   6   7
