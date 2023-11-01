@@ -16,6 +16,3 @@ if __name__ == '__main__':
 
     # testLinearSearch(arr, 6)
     testBinarySearch(arr, 650)
-
-# 100 200 300 400 500 600 700 800
-#  0   1   2   3   4   5   6   7
