@@ -1,5 +1,6 @@
 from list import List
 
+
 class LinearSearch(List):
     def __init__(self, list):
         super().__init__(list, len(list))
@@ -13,5 +14,3 @@ class LinearSearch(List):
         self.printResult(item, self.index)
         self.index = None
         return self.status
-        
-            

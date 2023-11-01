@@ -5,7 +5,7 @@ class List:
         self.status: bool = False
 
     def printResult(self, item, index):
-        if index:
+        if index or index == 0:
             print(f'{item} found at index {index}!')
             self.status = True
         else:
