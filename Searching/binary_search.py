@@ -10,8 +10,6 @@ class BinarySearch(List):
 
     def searchItem(self, item):
         self.list.sort()
-        size: int = self.right - self.left
-        mid: int = size//2
         while self.left <= self.right:
             # print(f'\t{self.left} --- {self.right}')
             size = self.right - self.left
