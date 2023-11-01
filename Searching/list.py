@@ -6,8 +6,8 @@ class List:
 
     def printResult(self, item, index):
         if index or index == 0:
-            print(f'{item} found at index {index}!')
+            print(f'Yes! {item} found!')
             self.status = True
         else:
-            print(f'{item} not found!\nindex: {index}')
+            print(f'Oops! {item} not found!')
             self.status = False

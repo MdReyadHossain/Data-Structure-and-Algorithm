@@ -1,25 +1,23 @@
 from list import List
 
+
 class BinarySearch(List):
     def __init__(self, list):
         super().__init__(list, len(list))
         self.index: int = None
-        self.min: int = 0
-        self.max: int = self.size - 1
+        self.left: int = 0
+        self.right: int = self.size - 1
 
     def searchItem(self, item):
         self.list.sort()
-        size: int = self.max - self.min
-        mid: int = size//2
-        while self.min <= self.max:
-            # print(f'\t{self.min} --- {self.max}')
-            mid = (size//2) + self.min
+        while self.left <= self.right:
+            # print(f'\t{self.left} --- {self.right}')
+            size = self.right - self.left
+            mid = self.left + (size//2)
             if self.list[mid] > item:
-                self.max = mid - 1
-                size = self.max - self.min
+                self.right = mid - 1
             elif self.list[mid] < item:
-                self.min = mid + 1
-                size = self.max - self.min
+                self.left = mid + 1
             else:
                 self.index = mid
                 break
