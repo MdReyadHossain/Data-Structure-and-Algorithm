@@ -23,6 +23,6 @@ if __name__ == '__main__':
         selectionSort.ascendingSort()
         selectionSort.printList('Ascending List')
 
-    testBubbleSort(arr)
-    # # testInsertionSort(arr)
-    # testSelectionSort(arr)
+    testBubbleSort(arr[:])
+    testInsertionSort(arr[:])
+    testSelectionSort(arr[:])

@@ -1,6 +1,7 @@
 from node import Node
 from list import List
 
+
 class SinglyList(List):
     def __init__(self):
         super().__init__(None, 0)
@@ -18,12 +19,14 @@ class SinglyList(List):
             self.insertAtFirst(data)
 
         else:
-            current: Node = self.head; previous: Node = current; cnt: int = 1
+            current: Node = self.head
+            previous: Node = current
+            cnt: int = 1
             while cnt < index:
                 previous = current
                 current = current.next
                 cnt += 1
-            
+
             node.next = current
             previous.next = node
             self.size += 1
@@ -34,7 +37,7 @@ class SinglyList(List):
             current: Node = self.head
             while current.next:
                 current = current.next
-            
+
             current.next = node
             self.size += 1
         else:
@@ -42,7 +45,7 @@ class SinglyList(List):
 
     def removeAtFirst(self):
         if self.head:
-            self.head = self.head.next 
+            self.head = self.head.next
             self.size -= 1
 
     def removeAt(self, index: int):
@@ -53,7 +56,8 @@ class SinglyList(List):
             self.head = self.head.next
 
         else:
-            current: Node = self.head; cnt: int = 1
+            current: Node = self.head
+            cnt: int = 1
             while cnt < index - 1:
                 current = current.next
                 cnt += 1
@@ -63,18 +67,19 @@ class SinglyList(List):
 
     def removeAtLast(self):
         if self.head:
-            current: Node = self.head; cnt: int = 1
+            current: Node = self.head
+            cnt: int = 1
             while current.next:
                 current = current.next
                 cnt += 1
                 if cnt == self.size-1:
                     break
-            
+
             current.next = None
             self.size -= 1
 
     def printList(self):
-        if self.head: 
+        if self.head:
             current: Node = self.head
             print('Head -> ', end='')
             while current.next:
@@ -88,7 +93,9 @@ class SinglyList(List):
 
     def reverse(self):
         if self.head:
-            current: Node = self.head; previousPtr:Node = None; nextPtr:Node = current.next
+            current: Node = self.head
+            previousPtr: Node = None
+            nextPtr: Node = current.next
             while current.next:
                 current.next = previousPtr
                 previousPtr = current
@@ -96,3 +103,6 @@ class SinglyList(List):
                 nextPtr = current.next
             current.next = previousPtr
             self.head = current
+
+    def sortList(self):
+        return
