@@ -9,22 +9,21 @@ class BinarySearch(List):
 
     def searchItem(self, item):
         self.list.sort()
-        print(self.list)
         size: int = self.max - self.min
-        while True:
+        mid: int = size//2
+        while self.min <= self.max:
+            # print(f'\t{self.min} --- {self.max}')
+            mid = (size//2) + self.min
             if self.list[mid] > item:
                 self.max = mid - 1
-                mid: int = int(size/2)
-                size: int = self.max - self.min
+                size = self.max - self.min
             elif self.list[mid] < item:
                 self.min = mid + 1
-                mid: int = int(size/2) + self.min
+                size = self.max - self.min
             else:
                 self.index = mid
-                self.printResult(item, self.index)
                 break
-            print(f'middle = {mid}')
-            print(f'{self.min} -- {self.max}')
-        print(f'middle = {mid}')
-        print(f'{self.min} -- {self.max}')
+            # print(f'\tmid = {mid}')
+            # print(f'\tvalue = {self.list[mid]}')
+        self.printResult(item, self.index)
         return self.status
