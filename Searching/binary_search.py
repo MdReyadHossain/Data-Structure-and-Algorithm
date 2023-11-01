@@ -1,6 +1,5 @@
 from list import List
 
-
 class BinarySearch(List):
     def __init__(self, list):
         super().__init__(list, len(list))
