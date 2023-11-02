@@ -22,7 +22,7 @@ if __name__ == '__main__':
 
     # testLinearSearch(arr[:], 200)
     # testBinarySearch(arr[:], 900)
-    testTernarySearch(arr[:], 800)
+    testTernarySearch(arr[:], 100)
 
 # 100, 200, 300, 400, 500, 600, 700, 800, 900
 #  0    1    2    3    4    5    6    7    8

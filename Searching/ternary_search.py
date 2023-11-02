@@ -13,11 +13,11 @@ class TernarySearch(List):
     def searchItem(self, item):
         self.list.sort()
         print(self.list)
-        while True:
+        while self.left <= self.right:
             self.size = self.right - self.left
             self.firstMid = self.left + (self.size // 3)
             self.secondMid = self.right - (self.size // 3)
-
+            # print(f'{self.left} -- {self.right}')
             if self.list[self.firstMid] == item:
                 self.index = self.firstMid
                 break
@@ -25,10 +25,13 @@ class TernarySearch(List):
                 self.index = self.secondMid
                 break
             elif self.list[self.firstMid] > item:
-                self.left = self.firstMid - 1
+                # print('--mid1')
+                self.right = self.firstMid - 1
             elif self.list[self.secondMid] < item:
-                self.right = self.secondMid + 1
+                # print('mid2--')
+                self.left = self.secondMid + 1
             elif self.list[self.firstMid] < item:
+                # print('mid1--')
                 self.left = self.firstMid + 1
                 self.right = self.secondMid - 1
         self.printResult(item, self.index)
