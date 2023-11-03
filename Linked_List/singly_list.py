@@ -19,26 +19,26 @@ class SinglyList(List):
             self.insertAtFirst(data)
 
         else:
-            current: Node = self.head
-            previous: Node = current
+            currentPtr: Node = self.head
+            previous: Node = currentPtr
             cnt: int = 1
             while cnt < index:
-                previous = current
-                current = current.next
+                previous = currentPtr
+                currentPtr = currentPtr.next
                 cnt += 1
 
-            node.next = current
+            node.next = currentPtr
             previous.next = node
             self.size += 1
 
     def insertAtLast(self, data):
         node: Node = Node(data, None)
         if self.head:
-            current: Node = self.head
-            while current.next:
-                current = current.next
+            currentPtr: Node = self.head
+            while currentPtr.next:
+                currentPtr = currentPtr.next
 
-            current.next = node
+            currentPtr.next = node
             self.size += 1
         else:
             self.head = node
@@ -56,36 +56,64 @@ class SinglyList(List):
             self.head = self.head.next
 
         else:
-            current: Node = self.head
+            currentPtr: Node = self.head
             cnt: int = 1
             while cnt < index - 1:
-                current = current.next
+                currentPtr = currentPtr.next
                 cnt += 1
 
-            current.next = current.next.next
+            currentPtr.next = currentPtr.next.next
             self.size -= 1
 
     def removeAtLast(self):
         if self.head:
-            current: Node = self.head
+            currentPtr: Node = self.head
             cnt: int = 1
-            while current.next:
-                current = current.next
+            while currentPtr.next:
+                currentPtr = currentPtr.next
                 cnt += 1
                 if cnt == self.size-1:
                     break
 
-            current.next = None
+            currentPtr.next = None
             self.size -= 1
+
+    def swapNode(self, index1, index2):
+        if self.head and index1 < index2:
+            currentPtrX: Node = self.head
+            currentPtrY: Node = self.head
+            previousX: Node = None
+            previousY: Node = None
+            cnt: int = 1
+            while cnt < index1:
+                previousX = currentPtrX
+                currentPtrX = currentPtrX.next
+                cnt += 1
+            cnt = 1
+            while cnt < index2:
+                previousY = currentPtrY
+                currentPtrY = currentPtrY.next
+                cnt += 1
+            nextPtrY = currentPtrY.next
+            if index2 - index1 == 1:
+                currentPtrY.next = currentPtrX
+            else:
+                previousY.next = currentPtrX
+                currentPtrY.next = currentPtrX.next
+            currentPtrX.next = nextPtrY
+            if index1 == 1:
+                self.head = currentPtrY
+            else:
+                previousX.next = currentPtrY
 
     def printList(self):
         if self.head:
-            current: Node = self.head
+            currentPtr: Node = self.head
             print('Head -> ', end='')
-            while current.next:
-                print(current.data, '-> ', end='')
-                current = current.next
-            print(current.data, '-> Null')
+            while currentPtr.next:
+                print(currentPtr.data, '-> ', end='')
+                currentPtr = currentPtr.next
+            print(currentPtr.data, '-> Null')
             print("List Size:", self.size)
 
         else:
@@ -93,16 +121,35 @@ class SinglyList(List):
 
     def reverse(self):
         if self.head:
-            current: Node = self.head
+            currentPtr: Node = self.head
             previousPtr: Node = None
-            nextPtr: Node = current.next
-            while current.next:
-                current.next = previousPtr
-                previousPtr = current
-                current = nextPtr
-                nextPtr = current.next
-            current.next = previousPtr
-            self.head = current
+            nextPtr: Node = currentPtr.next
+            while currentPtr.next:
+                currentPtr.next = previousPtr
+                previousPtr = currentPtr
+                currentPtr = nextPtr
+                nextPtr = currentPtr.next
+            currentPtr.next = previousPtr
+            self.head = currentPtr
 
+    # bubble sort approach
     def sortList(self):
-        return
+        currentXPtr: Node = self.head
+        currentYPtr: Node = self.head
+        cnt: int = 1
+        isSwap: bool = False
+        for i in range(self.size):
+            isSwap = False
+            for j in range(1, self.size - i):
+                currentXPtr = self.head
+                currentYPtr = self.head
+                cnt = 1
+                while cnt < j:
+                    currentXPtr = currentXPtr.next
+                    cnt += 1
+                currentYPtr = currentXPtr.next
+                if currentXPtr.data > currentYPtr.data:
+                    self.swapNode(j, j+1)
+                    isSwap = True
+            if isSwap == False:
+                break
