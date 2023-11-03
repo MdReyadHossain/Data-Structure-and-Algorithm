@@ -6,23 +6,25 @@ if __name__ == '__main__':
         print('\n')
         print('Singly List:')
         singlyList = SinglyList()
+        singlyList.insertAt(100, 1)
         singlyList.insertAtFirst(400)
         singlyList.insertAtFirst(200)
-        singlyList.insertAtLast(500)
-        singlyList.insertAt(100, 1)
-        singlyList.insertAt(300, 3)
-        singlyList.insertAt(600, 6)
 
-        singlyList.removeAtFirst()
-        singlyList.removeAtLast()
-        singlyList.removeAt(3)
+        singlyList.insertAt(300, 3)
+
+        singlyList.insertAtLast(500)
+        # singlyList.removeAtFirst()
+        # singlyList.removeAtLast()
+        # singlyList.removeAt(3)
 
         singlyList.getNode(1)
         singlyList.printList()
         print('\nReverse List:')
         singlyList.reverse()
         singlyList.printList()
-
+        print('\nSorted List:')
+        singlyList.sortList()
+        singlyList.printList()
 
     def testDoublyList():
         print('\n')
@@ -43,7 +45,6 @@ if __name__ == '__main__':
         print('\nReverse List:')
         doublyList.reverse()
         doublyList.printList()
-        
 
     testSinglyList()
-    testDoublyList()
+    # testDoublyList()
