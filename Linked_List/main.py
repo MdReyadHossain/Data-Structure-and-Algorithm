@@ -13,9 +13,9 @@ if __name__ == '__main__':
         singlyList.insertAt(300, 3)
 
         singlyList.insertAtLast(500)
-        # singlyList.removeAtFirst()
-        # singlyList.removeAtLast()
-        # singlyList.removeAt(3)
+        singlyList.removeAtFirst()
+        singlyList.removeAtLast()
+        singlyList.removeAt(3)
 
         singlyList.getNode(1)
         singlyList.printList()
@@ -47,4 +47,4 @@ if __name__ == '__main__':
         doublyList.printList()
 
     testSinglyList()
-    # testDoublyList()
+    testDoublyList()
