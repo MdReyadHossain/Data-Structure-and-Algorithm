@@ -140,6 +140,7 @@ class SinglyList(List):
         isSwap: bool = False
         for i in range(self.size):
             isSwap = False
+            self.printList()
             for j in range(1, self.size - i):
                 currentXPtr = self.head
                 currentYPtr = self.head
