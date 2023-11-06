@@ -1,3 +1,4 @@
+from merge_sort import MergeSort
 from bubble_sort import BubbleSort
 from insertion_sort import InsertionSort
 from selection_sort import SelectionSort
@@ -23,6 +24,12 @@ if __name__ == '__main__':
         selectionSort.ascendingSort()
         selectionSort.printList('Ascending List')
 
-    testBubbleSort(arr[:])
-    testInsertionSort(arr[:])
-    testSelectionSort(arr[:])
+    def testMergeSort(list):
+        mergeSort = MergeSort(list)
+        mergeSort.ascendingSort()
+        mergeSort.printList('Ascending List')
+
+    # testBubbleSort(arr[:])
+    # testInsertionSort(arr[:])
+    # testSelectionSort(arr[:])
+    testMergeSort(arr[:])
