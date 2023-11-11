@@ -1,7 +1,7 @@
 from list import List
 
 
-class BubbleSort(List):
+class MergeSort(List):
     def __init__(self, list: list):
         super().__init__(list, len(list), 'Merge Sort')
 
