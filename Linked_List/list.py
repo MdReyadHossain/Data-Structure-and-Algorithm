@@ -17,3 +17,4 @@ class List:
 
     def outOfBound(self, index: int):
         print(f'Error: Index {index} is out of bound!')
+        
