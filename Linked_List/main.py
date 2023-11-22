@@ -55,9 +55,15 @@ if __name__ == '__main__':
         circualrSinglyList.inserAtFirst(100)
         circualrSinglyList.insertAtLast(400)
         circualrSinglyList.insertAtLast(500)
+        circualrSinglyList.insertAt(300, 3)
+        circualrSinglyList.printList()
+        print('\nAfter Remove: ')
+        # circualrSinglyList.removeAtFirst()
+        circualrSinglyList.removeAtLast()
         circualrSinglyList.printList()
 
-        circualrSinglyList.getNextNode(3)
+        # circualrSinglyList.getNextNode(3)
+
     # testSinglyList()
     # testDoublyList()
     testCircualarSingly()
