@@ -55,12 +55,22 @@ class CircularSinglyList(List):
         self.size -= 1
 
     def removeAt(self, index):
-        currentPtr: Node = self.head
-        cnt: int = 1
-        while cnt < index - 1:
-            currentPtr = currentPtr.next
-            cnt += 1
-        
+        if index < 1 or index > self.size:
+            self.outOfBound(index)
+        elif self.size == 1 or index == 1:
+            self.removeAtFirst()
+        else:
+            currentPtr: Node = self.head
+            cnt: int = 1
+            while cnt < index - 1:
+                currentPtr = currentPtr.next
+                cnt += 1
+            removePtr: Node = currentPtr.next
+            if removePtr == self.tail:
+                currentPtr.next = self.head
+                self.tail = currentPtr
+            currentPtr.next = removePtr.next
+            self.size -= 1
 
     def removeAtLast(self):
         if self.size == 1:
