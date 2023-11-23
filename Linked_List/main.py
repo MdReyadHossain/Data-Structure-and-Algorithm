@@ -1,6 +1,7 @@
 from singly_list import SinglyList
 from doubly_list import DoublyList
 from circular_singly import CircularSinglyList
+from cirular_doubly import CircularDoublyList
 
 if __name__ == '__main__':
     def testSinglyList():
@@ -64,6 +65,10 @@ if __name__ == '__main__':
         circualrSinglyList.getNode(4)
         # circualrSinglyList.getNextNode(3)
 
+    def testCircualarDoubly():
+        circularDoublyList = CircularDoublyList()
+
     # testSinglyList()
     # testDoublyList()
-    testCircualarSingly()
+    # testCircualarSingly()
+    testCircualarDoubly()
