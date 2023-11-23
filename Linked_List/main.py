@@ -59,9 +59,9 @@ if __name__ == '__main__':
         circualrSinglyList.printList()
         print('\nAfter Remove: ')
         # circualrSinglyList.removeAtFirst()
-        circualrSinglyList.removeAtLast()
+        circualrSinglyList.removeAt(7)
         circualrSinglyList.printList()
-
+        circualrSinglyList.getNode(4)
         # circualrSinglyList.getNextNode(3)
 
     # testSinglyList()
