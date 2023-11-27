@@ -62,11 +62,18 @@ if __name__ == '__main__':
         # circualrSinglyList.removeAtFirst()
         circualrSinglyList.removeAt(7)
         circualrSinglyList.printList()
-        circualrSinglyList.getNode(4)
+        # circualrSinglyList.getNode(4)
         # circualrSinglyList.getNextNode(3)
 
     def testCircualarDoubly():
         circularDoublyList = CircularDoublyList()
+        circularDoublyList.insertAtFirst(300)
+        circularDoublyList.insertAtFirst(200)
+        circularDoublyList.insertAtFirst(100)
+        circularDoublyList.insertAtLast(500)
+        circularDoublyList.insertAtLast(600)
+        circularDoublyList.insertAt(400, 4)
+        circularDoublyList.printList()
 
     # testSinglyList()
     # testDoublyList()

@@ -30,8 +30,7 @@ class SinglyList(List):
             node.next = currentPtr
             previous.next = node
             self.size += 1
-# p      c 
-# 200 > 400 > 500
+
     def insertAtLast(self, data):
         node: Node = Node(data, None)
         if self.head:
