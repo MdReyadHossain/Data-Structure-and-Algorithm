@@ -74,7 +74,9 @@ if __name__ == '__main__':
         circularDoublyList.insertAtLast(600)
         circularDoublyList.insertAt(400, 4)
         circularDoublyList.printList()
-        # circularDoublyList.removeAtFirst()
+        circularDoublyList.removeAtFirst()
+        circularDoublyList.removeAtLast()
+        circularDoublyList.removeAt(1)
         circularDoublyList.printList()
 
     # testSinglyList()
