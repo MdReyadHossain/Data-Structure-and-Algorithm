@@ -1,6 +1,7 @@
 from singly_list import SinglyList
 from doubly_list import DoublyList
 from circular_singly import CircularSinglyList
+from cirular_doubly import CircularDoublyList
 
 if __name__ == '__main__':
     def testSinglyList():
@@ -55,9 +56,28 @@ if __name__ == '__main__':
         circualrSinglyList.inserAtFirst(100)
         circualrSinglyList.insertAtLast(400)
         circualrSinglyList.insertAtLast(500)
+        circualrSinglyList.insertAt(300, 3)
         circualrSinglyList.printList()
+        print('\nAfter Remove: ')
+        # circualrSinglyList.removeAtFirst()
+        circualrSinglyList.removeAt(7)
+        circualrSinglyList.printList()
+        # circualrSinglyList.getNode(4)
+        # circualrSinglyList.getNextNode(3)
 
-        circualrSinglyList.getNextNode(3)
+    def testCircualarDoubly():
+        circularDoublyList = CircularDoublyList()
+        circularDoublyList.insertAtFirst(300)
+        circularDoublyList.insertAtFirst(200)
+        circularDoublyList.insertAtFirst(100)
+        circularDoublyList.insertAtLast(500)
+        circularDoublyList.insertAtLast(600)
+        circularDoublyList.insertAt(400, 4)
+        circularDoublyList.printList()
+        # circularDoublyList.removeAtFirst()
+        circularDoublyList.printList()
+
     # testSinglyList()
     # testDoublyList()
-    testCircualarSingly()
+    # testCircualarSingly()
+    testCircualarDoubly()
