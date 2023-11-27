@@ -10,8 +10,7 @@ This repository contains Python implementations of various data structures and a
 
 ## Getting Started
 
-> First of all you need to install letest version of python on your machine, 
-Then follow these instruction:
+> First of all you need to install letest version of python on your machine, <br>Then follow these instruction:
 
 1. To run clone repository:
 
@@ -26,8 +25,7 @@ cd Data-Structure-and-Algorithm
 ```
 
 3. run any 'main.py' file from any directory:
->    python -u directory name/main.py
-   for example:
+>    python -u directory name/main.py <br>for example:
 
 ```bash
 python -u Linked_List/main.py
