@@ -70,8 +70,34 @@ class CircularDoublyList(List):
             self.head = self.head.next
         self.size -= 1
 
+    def removeAt(self, index):
+        if index < 1 or index > self.size:
+            self.outOfBound(index)
+        elif self.size == 1:
+            self.removeAtFirst()
+        else:
+            currentPtr: Node = self.head
+            cnt: int = 1
+            while cnt < index:
+                currentPtr = currentPtr.next
+                cnt += 1
+            currentPtr.previous.next = currentPtr.next
+            currentPtr.next.previous = currentPtr.previous
+            if index == self.size:
+                self.tail = currentPtr.previous
+            elif index == 1:
+                self.head = currentPtr.next
+            self.size -= 1
+
     def removeAtLast(self):
-        self.size -= 1
+        if self.size == 1:
+            self.removeAtFirst()
+        elif self.size > 1:
+            previousLastPtr: Node = self.tail.previous
+            previousLastPtr.next = self.head
+            self.head.previous = previousLastPtr
+            self.tail = previousLastPtr
+            self.size -= 1
 
     def printList(self):
         if self.head:
@@ -81,7 +107,7 @@ class CircularDoublyList(List):
             while currentPtr.next != self.head:
                 print(currentPtr.data, '<-> ', end='')
                 currentPtr = currentPtr.next
-            print(self.tail.data, '(Tail) <-> (Head)',
+            print(self.tail.data, '<-> Tail <-> (Head)',
                   currentPtr.next.data, '...')
 
             print('...', currentPtr.next.data,
@@ -89,7 +115,7 @@ class CircularDoublyList(List):
             while currentPtr.previous != self.tail:
                 print(currentPtr.data, '<-> ', end='')
                 currentPtr = currentPtr.previous
-            print(self.head.data, '(Head) <-> (Tail)',
+            print(self.head.data, '<-> Head <-> (Tail)',
                   currentPtr.previous.data, '...')
 
             print('List Size: ', self.size)
