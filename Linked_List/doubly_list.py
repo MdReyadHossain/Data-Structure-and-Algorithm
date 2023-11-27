@@ -30,11 +30,7 @@ class DoublyList(List):
             node.previous = currentPtr
             self.size += 1
         else:
-            self.outOfBound(index)
-    
-    # def insertAt(self, data, index):
-    #     if :
-            
+            self.outOfBound(index)            
 
     def insertAtLast(self, data):
         node = Node(data)
