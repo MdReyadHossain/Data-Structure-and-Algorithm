@@ -8,3 +8,27 @@ This repository contains Python implementations of various data structures and a
 2. [Sorting Algorithms](Sorting/)
 3. [Searching Algorithms](Searching/)
 
+## Getting Started
+
+First of all you need to install letest version of python on your machine,
+Then follow these instruction:
+
+1. To run clone repository:
+
+```bash
+git clone https://github.com/MdReyadHossainData-Structure-and-Algorithm.git
+```
+
+2. Change directory:
+
+```bash
+cd Data-Structure-and-Algorithm
+```
+
+3. run any 'main.py' file from any directory:
+   python -u <directory name>/main.py
+   for example:
+
+```bash
+python -u Linked_List/main.py
+```
