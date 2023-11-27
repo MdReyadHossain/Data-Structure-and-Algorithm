@@ -60,21 +60,38 @@ class CircularDoublyList(List):
         else:
             self.insertAtFirst(data)
 
+    def removeAtFirst(self):
+        if self.size == 1:
+            self.head = None
+            self.tail = None
+        elif self.head:
+            self.tail.next = self.head.next
+            self.head.next.previous = self.tail
+            self.head = self.head.next
+        self.size -= 1
+
+    def removeAtLast(self):
+        self.size -= 1
+
     def printList(self):
-        currentPtr: Node = self.head
-        print('...', currentPtr.previous.data,
-              '(Tail) <-> Head <-> ', end='')
-        while currentPtr.next != self.head:
-            print(currentPtr.data, '<-> ', end='')
-            currentPtr = currentPtr.next
-        print(self.tail.data, '(Tail) <-> (Head)', currentPtr.next.data, '...')
+        if self.head:
+            currentPtr: Node = self.head
+            print('...', currentPtr.previous.data,
+                  '(Tail) <-> Head <-> ', end='')
+            while currentPtr.next != self.head:
+                print(currentPtr.data, '<-> ', end='')
+                currentPtr = currentPtr.next
+            print(self.tail.data, '(Tail) <-> (Head)',
+                  currentPtr.next.data, '...')
 
-        print('...', currentPtr.next.data,
-              '(Head) <-> Tail <-> ', end='')
-        while currentPtr.previous != self.tail:
-            print(currentPtr.data, '<-> ', end='')
-            currentPtr = currentPtr.previous
-        print(self.head.data, '(Head) <-> (Tail)',
-              currentPtr.previous.data, '...')
+            print('...', currentPtr.next.data,
+                  '(Head) <-> Tail <-> ', end='')
+            while currentPtr.previous != self.tail:
+                print(currentPtr.data, '<-> ', end='')
+                currentPtr = currentPtr.previous
+            print(self.head.data, '(Head) <-> (Tail)',
+                  currentPtr.previous.data, '...')
 
-        print('List Size: ', self.size)
+            print('List Size: ', self.size)
+        else:
+            print('Empty List!\nList Size: ', self.size)
