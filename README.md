@@ -1,6 +1,6 @@
 # Data Structure and Algorithm
 
-This repository contains Python implementations of various data structures and algorithms. The implementations are organized by topics, making it easy to navigate and understand the codebase. Whether you are preparing for coding interviews or simply want to enhance your problem-solving skills, this repository provides a comprehensive resource.
+This repository contains Python implementations of various data structures and algorithms with Object Oriented way. The implementations are organized by topics, making it easy to navigate and understand the codebase.
 
 ## Table of Contents
 
@@ -10,7 +10,7 @@ This repository contains Python implementations of various data structures and a
 
 ## Getting Started
 
-First of all you need to install letest version of python on your machine,
+> First of all you need to install letest version of python on your machine, 
 Then follow these instruction:
 
 1. To run clone repository:
@@ -26,7 +26,7 @@ cd Data-Structure-and-Algorithm
 ```
 
 3. run any 'main.py' file from any directory:
-   python -u <directory name>/main.py
+>    python -u directory name/main.py
    for example:
 
 ```bash
