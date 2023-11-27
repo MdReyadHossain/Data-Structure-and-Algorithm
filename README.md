@@ -4,13 +4,7 @@ This repository contains Python implementations of various data structures and a
 
 ## Table of Contents
 
-1. [Arrays](arrays/)
-2. [Linked Lists](linked_lists/)
-3. [Stacks](stacks/)
-4. [Queues](queues/)
-5. [Trees](trees/)
-6. [Graphs](graphs/)
-7. [Sorting Algorithms](sorting_algorithms/)
-8. [Searching Algorithms](searching_algorithms/)
-9. [Dynamic Programming](dynamic_programming/)
-10. [Greedy Algorithms](greedy_algorithms/)
+1. [Linked Lists](Linked_List/)
+2. [Sorting Algorithms](Sorting/)
+3. [Searching Algorithms](Searching/)
+
