@@ -1,5 +1,7 @@
 from node import Node
 
+# LIFO -> Last In First Out
+
 
 class Stack:
     def __init__(self) -> None:
@@ -32,8 +34,10 @@ class Stack:
 
     def printStack(self):
         currentPtr: Node = self.head
+        sl: int = self.size
         print('Stack: ')
         while currentPtr.next:
-            print(currentPtr.data)
+            print(f'\t{sl}.', currentPtr.data)
+            sl -= 1
             currentPtr = currentPtr.next
-        print(currentPtr.data, '\n')
+        print(f'\t{sl}.', currentPtr.data, '\n')
