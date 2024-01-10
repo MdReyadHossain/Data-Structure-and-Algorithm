@@ -7,6 +7,8 @@ This repository contains Python implementations of various data structures and a
 1. [Linked Lists](Linked_List/)
 2. [Sorting Algorithms](Sorting/)
 3. [Searching Algorithms](Searching/)
+4. [Stack-Queue using Linked List](Stack-Queue/)
+5. [Stack-Queue using Array](Stack-Queue/using-array)
 
 ## Getting Started
 
@@ -25,7 +27,7 @@ cd Data-Structure-and-Algorithm
 ```
 
 3. run any 'main.py' file from any directory:
->    python -u directory name/main.py <br>for example:
+    > python -u directory name/main.py <br>for example:
 
 ```bash
 python -u Linked_List/main.py
