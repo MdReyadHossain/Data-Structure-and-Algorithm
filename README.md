@@ -12,15 +12,15 @@ This repository contains Python implementations of various data structures and a
 
 ## Getting Started
 
-> First of all you need to install letest version of python on your machine, <br>Then follow these instruction:
+> First of all you need to install letest version of python on your machine from here, [Python](https://www.python.org/), <br>Then follow these instruction:
 
-1. To run clone repository:
+1. clone repository:
 
 ```bash
 git clone https://github.com/MdReyadHossainData-Structure-and-Algorithm.git
 ```
 
-2. Change directory:
+2. Change directory to:
 
 ```bash
 cd Data-Structure-and-Algorithm
