@@ -1,16 +1,11 @@
 from node import Node
+from list import List
 
 # LIFO -> Last In First Out
 
-
-class Stack:
+class Stack(List):
     def __init__(self) -> None:
-        self.head: Node = None
-        self.size = 0
-
-    def emptyList(self):
-        print('Empty List!')
-        return self.head == None
+        super().__init__(None, 0)
 
     def push(self, data: int):
         newNode: Node = Node(data)
@@ -24,13 +19,13 @@ class Stack:
             self.head = self.head.next
             self.size -= 1
         else:
-            self.emptyList()
+            self.isEmptyList()
 
     def peek(self):
         if self.head:
             return self.head.data
         else:
-            self.emptyList()
+            self.isEmptyList()
 
     def printStack(self):
         currentPtr: Node = self.head

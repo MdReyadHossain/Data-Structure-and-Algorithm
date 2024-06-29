@@ -14,8 +14,8 @@ class Stack(List):
 
     def pop(self):
         if len(self.list) > 0:
-            self.list.pop()
-            return True
+            top: int = self.list.pop()
+            return top
         print('Empty array, could not perform pop() operation')
         return False
 
@@ -29,7 +29,7 @@ class Stack(List):
         currentIndex: int = len(self.list) - 1
         print('Stack: ')
         while currentIndex >= 0:
-            print('\t', self.list[currentIndex])
+            print(f'\t{currentIndex + 1}.', self.list[currentIndex])
             currentIndex -= 1
 
         if len(self.list) == 0:
