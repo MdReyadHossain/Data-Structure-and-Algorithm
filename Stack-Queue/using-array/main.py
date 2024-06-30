@@ -21,14 +21,16 @@ if __name__ == '__main__':
         queueList.enqueue(500)
         queueList.enqueue(400)
         queueList.enqueue(300)
+        queueList.enqueue(200)
         queueList.printQueue()
 
-        print('Dequeue: ')
+        print("Peek: ", queueList.peek())
+
+        print('\nDequeue: ')
         sl: int = 1
-        while not queueList.isEmpty():
+        while not queueList.isEmptyQueue():
             print(f'\t{sl}. ', queueList.dequeue())
             sl += 1
-        print(f'\t ', queueList.dequeue())
         print()
 
     testStack()

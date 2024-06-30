@@ -3,9 +3,7 @@ class List:
         self.list = [] * size
         self.size = size
         self.tail = -1
-        
-    def isEmpty(self):
-        return self.tail == -1
+        self.head = -1
 
     def determineSize(self):
         return len(self.list) < self.size
