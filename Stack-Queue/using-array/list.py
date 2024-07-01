@@ -1,6 +1,6 @@
 class List:
     def __init__(self, size: int) -> None:
-        self.list = [] * size
+        self.list = [0] * size
         self.size = size
         self.tail = -1
         self.head = -1
