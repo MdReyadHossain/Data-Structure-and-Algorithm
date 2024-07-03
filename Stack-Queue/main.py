@@ -1,5 +1,6 @@
 from stack import Stack
 from queue import Queue
+from circular_queue import CircularQueue
 
 if __name__ == '__main__':
     def testStack():
@@ -27,6 +28,10 @@ if __name__ == '__main__':
         print('Dequeue: ')
         while not queueList.isEmptyList():
             print('\t', queueList.dequeue())
-            
+
+    def testCircularQueue():
+        circularQueue = CircularQueue()
+
     testStack()
     testQueue()
+    testCircularQueue()

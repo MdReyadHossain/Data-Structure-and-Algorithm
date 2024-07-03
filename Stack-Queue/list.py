@@ -1,5 +1,5 @@
 class List:
-    def __init__(self, head, size):
+    def __init__(self, head, size: int):
         self.head = head
         self.size = size
         self.tail = None
