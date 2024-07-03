@@ -1,6 +1,7 @@
 from list import List
 from node import Node
 
+
 class Queue(List):
     def __init__(self):
         super().__init__(None, 0)
@@ -16,16 +17,18 @@ class Queue(List):
         self.tail = newNode
 
     def dequeue(self):
-        if self.head:
-            self.size -= 1
-            node: Node = self.head
-            self.head = self.head.next
-            if self.head is None:
-                self.tail = None
-            return node.data
-        self.isEmptyList()
+        if self.isEmptyList():
+            return "Queue is empty"
+        self.size -= 1
+        node: Node = self.head
+        self.head = self.head.next
+        if self.head is None:
+            self.tail = None
+        return node.data
 
     def printQueue(self):
+        if self.isEmptyList():
+            return "Queue is empty"
         currentPtr: Node = self.head
         sl: int = 1
         print('Queue:')
@@ -33,4 +36,3 @@ class Queue(List):
             print(f'\t{sl}.', currentPtr.data)
             sl += 1
             currentPtr = currentPtr.next
-        

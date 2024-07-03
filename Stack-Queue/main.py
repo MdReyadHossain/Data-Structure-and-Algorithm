@@ -31,7 +31,20 @@ if __name__ == '__main__':
 
     def testCircularQueue():
         circularQueue = CircularQueue()
+        circularQueue.enqueue(500)
+        circularQueue.enqueue(400)
+        circularQueue.enqueue(300)
+        circularQueue.enqueue(200)
+        circularQueue.printQueue()
 
-    testStack()
-    testQueue()
+        sl: int = 1
+        print('\nDequeue: ')
+        while not circularQueue.isEmptyList():
+            print(f'\t{sl}.', circularQueue.peek(), '-> dequeue')
+            circularQueue.dequeue()
+            sl += 1
+        print()
+
+    # testStack()
+    # testQueue()
     testCircularQueue()
