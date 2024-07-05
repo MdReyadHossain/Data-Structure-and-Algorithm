@@ -14,17 +14,27 @@ class Stack(List):
             newNode.next = self.head
         self.head = newNode
         self.size += 1
+        return data
 
     def pop(self):
         if self.isEmptyList():
             return "Stack is empty"
+        data: int = self.head.data
         self.head = self.head.next
         self.size -= 1
+        return data
 
     def peek(self):
         if self.isEmptyList():
             return "Stack is empty"
         return self.head.data
+    
+    def pushAtBottom(self, data: int): 
+        newNode: Node = Node(data, None)
+        if self.isEmptyList():
+            self.head = newNode
+            
+        
 
     def printStack(self):
         if self.isEmptyList():
